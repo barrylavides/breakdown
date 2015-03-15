@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		label, ul {
+			border: 1px solid #000;
+			cursor: pointer;
+		}
+
+		ul li {
+			display: none;
+		}
+
+		#main-container {
+			margin: 0 auto;
+			border: 1px solid #000;
+			width: 100%;
+		}
+
+		#left-section {
+			width: 20%;
+			border: 1px solid #000;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(document).on('click', 'label', function() {
+				var directChildren = $(this).next('ul').find('> li');
+				
+				if (directChildren.is(':visible')) {
+					directChildren.hide();
+				} else {
+					directChildren.show();
+				}				
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="main-container">
+		<div id="left-section">
+			<label>Work</label>
+			<ul>
+				<li>
+					<label>Millipede</label>
+					<ul>
+						<li>Web</li>
+						<li>Middleware</li>
+						<li>Mobile</li>
+					</ul>
+				</li>
+				<li>Iplaypen</li>
+				<li>Novo</li>
+			</ul>			
+		</div>
+	</div>
+</body>
+</html>

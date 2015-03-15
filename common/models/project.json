@@ -1,0 +1,21 @@
+{
+  "name": "Project",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "ref_gid": {
+      "type": "string",
+      "id": false,
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
